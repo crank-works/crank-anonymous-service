@@ -25,36 +25,45 @@
 #  database: db/production.sqlite3
 
 
-# Postgres configuration
-development:
-  host: localhost
-  adapter: postgresql
-  encoding: utf8
-  database: crank_anonymous_development
-  pool: 5
-  username: postgres
-#  username: cyclingservices
-#  password: password
-
-test:
-  host: localhost
-  adapter: postgresql
-  encoding: utf8
-  database: crank_anonymous_test
-  username: postgres
-
+## Postgres configuration
+#development:
 #  host: localhost
+#  adapter: postgresql
 #  encoding: utf8
+#  database: crank_anonymous_development
 #  pool: 5
-#  password: password
-
-
-production:
-  host: localhost
-  adapter: postgresql
-  encoding: utf8
-  database: crank_anonymous_production
-  pool: 5
-  username: postgres
-
+#  username: postgres
+##  username: cyclingservices
+##  password: password
+#
+#test:
 #  host: localhost
+#  adapter: postgresql
+#  encoding: utf8
+#  database: crank_anonymous_test
+#  username: postgres
+#
+##  host: localhost
+##  encoding: utf8
+##  pool: 5
+##  password: password
+#
+#
+## Heroku requires no username
+#production:
+#  host: localhost
+#  adapter: postgresql
+#  encoding: utf8
+#  database: crank_anonymous_production
+#  pool: 5
+#
+##  host: localhost
+
+
+# Setup for Heroku
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5

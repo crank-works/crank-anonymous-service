@@ -39,7 +39,11 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 
+# Postgres
 gem 'pg'
+
+# Heroku requires this
+gem 'rails_12factor', group: :production
 
 
 group :development, :test do
