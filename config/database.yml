@@ -82,3 +82,11 @@ test:
   database: cycling-service-test
   pool: 5
   username: postgres
+
+
+production:
+  <<: *default
+  database: cycling-service-production
+  pool: 5
+  username: cyclingservices
+  password: password
