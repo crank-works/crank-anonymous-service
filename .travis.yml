@@ -1,7 +1,7 @@
 before_script:
-  - psql -c 'create database crank_anonymous_test;' -U postgres
+  - bin/rake db:create db:migrate
 
-language: ruby
+language: rub
 rvm:
   - "2.1.2"
 
