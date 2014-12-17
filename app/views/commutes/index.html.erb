@@ -11,7 +11,6 @@
     <% @commutes.each do |commute| %>
       <tr>
         <td><%= link_to 'Show', commute %></td>
-        <td><%= link_to 'Edit', edit_commute_path(commute) %></td>
         <td><%= link_to 'Destroy', commute, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -19,5 +18,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Commute', new_commute_path %>

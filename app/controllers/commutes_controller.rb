@@ -12,15 +12,6 @@ class CommutesController < ApplicationController
   def show
   end
 
-  # GET /commutes/new
-  def new
-    @commute = Commute.new
-  end
-
-  # GET /commutes/1/edit
-  def edit
-  end
-
   # POST /commutes
   # POST /commutes.json
   def create

@@ -52,21 +52,6 @@ RSpec.describe CommutesController, :type => :controller do
     end
   end
 
-  describe "GET new" do
-    it "assigns a new commute as @commute" do
-      get :new, {}, valid_session
-      expect(assigns(:commute)).to be_a_new(Commute)
-    end
-  end
-
-  describe "GET edit" do
-    it "assigns the requested commute as @commute" do
-      commute = Commute.create! valid_attributes
-      get :edit, {:id => commute.to_param}, valid_session
-      expect(assigns(:commute)).to eq(commute)
-    end
-  end
-
   describe "POST create" do
     describe "with valid params" do
       it "creates a new Commute" do

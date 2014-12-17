@@ -7,16 +7,8 @@ RSpec.describe CommutesController, :type => :routing do
       expect(:get => "/commutes").to route_to("commutes#index")
     end
 
-    it "routes to #new" do
-      expect(:get => "/commutes/new").to route_to("commutes#new")
-    end
-
     it "routes to #show" do
       expect(:get => "/commutes/1").to route_to("commutes#show", :id => "1")
-    end
-
-    it "routes to #edit" do
-      expect(:get => "/commutes/1/edit").to route_to("commutes#edit", :id => "1")
     end
 
     it "routes to #create" do
