@@ -1,0 +1,17 @@
+<%= form_for(@commute) do |f| %>
+  <% if @commute.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@commute.errors.count, "error") %> prohibited this commute from being saved:</h2>
+
+      <ul>
+      <% @commute.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
