@@ -15,7 +15,7 @@ RSpec.describe Commute, :type => :model do
   end
 
   describe 'model' do
-    before { FactoryGirl.create(:commute) }
-    it { expect(Commute.count).to equal(1) }
+    before { 2.times { FactoryGirl.create(:commute) } }
+    it { expect(Commute.count).to equal(2) }
   end
 end
