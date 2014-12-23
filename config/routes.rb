@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
 
+  resources :commutes, except: [:new, :edit]
+
 #  get 'welcome/index'
 
 
